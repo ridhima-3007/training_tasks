@@ -1,0 +1,211 @@
+body {
+    margin: 0px;
+    background-color: black;
+}
+
+.buttons-grid {
+    display: flex;
+    flex-direction: column;
+    font-weight: bolder;
+}
+
+.btn {
+    border-radius: 15px;
+    padding: 15px 25px;
+    margin: 10px;
+    border: none;
+    max-width: 250px;
+    font-weight: 200;
+    font-size: medium;
+}
+
+.card {
+    background-color: lightslategray;
+    height: 54vh;
+    width: 25vw;
+    padding: 20px;
+}
+
+.detail .first {
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding-left: 5vw;
+}
+
+.editor {
+    grid-column: 2;
+}
+
+.home {
+    background-color: black;
+    width: 100%;
+    height: 60vh;
+    text-align: center;
+}
+
+.home .first {
+    font-size: 50px;
+    color: white;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 20vh;
+    font-weight: bolder;
+}
+
+.home .second {
+    font-size: 20px;
+    padding-top: 5vh;
+    color: rgb(232, 232, 95);
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+
+.items {
+    background-color: white;
+    padding: 10px 100px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.items h1 {
+    font-size: 7vh;
+}
+
+.items p {
+    font-size: 3vh;
+}
+
+.language {
+    background-color: rgb(160, 212, 160);
+}
+
+.language-grid {
+    display: grid;
+    gap: 50px;
+    padding-left: 25vw;
+    padding-right: 25vw;
+}
+
+.language-cards {
+    background-color: black;
+    margin: 0;
+}
+
+.large-cards {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    background-color: black;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    overflow: auto;
+}
+
+.nav li {
+    padding: 10px;
+}
+
+.nav::-webkit-scrollbar {
+    display: none;
+}
+
+.search-bar {
+    margin-top: 5vh;
+}
+
+.search-bar input[type='text'] {
+    height: 30px;
+    width: 200px;
+    margin-right: 0;
+    padding-right: 0;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: none;
+}
+
+.search-bar button {
+    height: 32px;
+    width: 30px;
+    background-color: green;
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-left: 0px;
+    margin-left: 0px;
+    cursor: pointer;
+}
+
+.sub-card {
+    background-image: url("html_code.jpg");
+    background-size: contain;
+    height: 52vh;
+    width: 25vw;
+}
+
+.signup-form {
+    background-color: white;
+    max-width: 75vw;
+    margin: auto;
+    margin-top: 20vh;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10vh;
+}
+
+.signup-form input[type='text'] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    border-radius: 5px;;
+}
+
+.signup-form button {
+    background-color: lightgreen;
+    border-radius: 5px;
+}
+
+table {
+    color: white;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td {
+    border: 1px solid white;
+    font-size: medium;
+    padding: 10px
+}
+
+.table-content {
+    max-width: 75%;
+    margin: auto;
+    margin-bottom: 10vh;
+}
+
+@media only screen and (max-width: 1000px) {
+    .editor {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .large-cards {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+    }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css_task4.css" />
+  </head>
+  <body>
+    <h1>Form</h1>
+    <div class="container">
+      <form action="#" class="forms">
+        <!-- input -->
+        <div class="name">
+          <div class="firstName">
+            <label for="firstname">First Name: </label>
+            <input class="txt-input" type="text" required="required" />
+          </div>
+          <div class="lastName">
+            <label for="lastName">Last Name: </label>
+            <input class="txt-input" type="text" required="required" />
+          </div>
+        </div>
+        <div class="name">
+          <div class="firstName">
+            <label for="firstname">Phone Number: </label>
+            <input
+              class="txt-input"
+              type="number"
+              maxlength="10"
+              required="required"
+            />
+          </div>
+          <div class="lastName">
+            <label for="lastName">Email ID: </label>
+            <input class="txt-input" type="email" required="required" />
+          </div>
+        </div>
+
+        <!-- text area -->
+        <label for="">About:</label>
+        <textarea> </textarea>
+
+        <div class="name">
+          <!-- radio button -->
+          <div class="radio">
+            <label for="">Gender: </label>
+            <div class="gender">
+              <input type="radio" name="gender" id="male" value="Male" />
+              <label style="display: inline; margin-right: 2vw" for="male"
+                >Male</label
+              >
+              <input type="radio" name="gender" id="female" value="Female" />
+              <label style="display: inline; margin-right: 2vw" for="female"
+                >Female</label
+              >
+              <input type="radio" name="gender" id="other" value="Other" />
+              <label style="display: inline; margin-right: 2vw" for="other"
+                >Other</label
+              >
+            </div>
+          </div>
+          <!-- Checkbox -->
+          <div class="checkbox">
+            <label for="">Languages known: </label>
+            <div class="gender">
+              <input type="checkbox" name="language" />
+              <label style="display: inline; margin-right: 2vw" for=""
+                >Java</label
+              >
+              <input type="checkbox" name="language" />
+              <label style="display: inline; margin-right: 2vw" for=""
+                >C++</label
+              >
+              <input type="checkbox" name="language" />
+              <label style="display: inline; margin-right: 2vw" for=""
+                >Python</label
+              >
+              <input type="checkbox" name="language" />
+              <label style="display: inline; margin-right: 2vw" for=""
+                >JavaScript</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- select option -->
+        <label for="" style="margin-top: 2vh;">Choose your city: </label>
+        <select name="city" id="city">
+          <option value="panipat">Panipat</option>
+          <option value="sonipat">Sonipat</option>
+          <option value="hisar">Hisar</option>
+          <option value="noida">Noida</option>
+          <option value="karnal">Karnal</option>
+        </select>
+
+        <!-- button -->
+        <button class="btn" type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

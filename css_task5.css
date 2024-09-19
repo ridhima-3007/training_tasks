@@ -1,0 +1,324 @@
+body {
+    margin: 0;
+    background-color: rgb(228, 225, 221);
+    /* height: 900px; */
+}
+
+.btn button{
+    color: white;
+    font-size: medium;
+    background-color: rgb(0, 89, 255);
+    background: linear-gradient(93deg, #53b2fe, #065af3);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 1.5vh;
+    margin-left: 14px;
+}
+
+.btn button .img1 {
+    width: 23px;
+    height: 22px;
+    float: left;
+}
+
+.btn button span {
+    font-size: 9px;
+    float: left;
+    margin-top: 6px;
+    margin-left: 4px;
+    margin-right: 3vw;
+    font-weight: 600;
+}
+
+.img2 {
+    height: 10px;
+    width: 13px;
+    float: right; 
+    margin-top: 5px; 
+    margin-left: 4px
+}
+
+.btn2 button {
+    color: white;
+    font-size: medium;
+    /* background: linear-gradient(
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.2)); */
+    background-color: rgb(255 255 255 / 15%);
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.container {
+    max-width: 89%;
+    margin: auto;
+    margin-top: 11vh;
+    background-color: white;
+    border-radius: 10px;
+    font-family: "Lato", sans-serif;
+    max-height: 52vh;
+}
+
+.content {
+    position: relative;
+    top: -4vh;
+    margin: 0 3vh;
+}
+
+.discount {
+    border: 1px solid lightgray;
+    margin-top: 3vh;
+    margin-left: 1vw;
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 32px;
+}
+
+.discount label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.discount p {
+    margin: 0;
+    margin-left: 4vh;
+    color: gray;
+    font-size: 12px;
+}
+
+.explore {
+    color: white;
+    text-align: center;
+    margin-top: 6vh;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 10px;
+    margin-top: 1vh;
+    max-height: 110px;
+}
+
+.grid-container div{ 
+    /* border: 0.5px solid lightgray; */
+    /* padding: 0 2px; */
+}
+
+.first {
+    width: 25%;
+    border-right: 1px solid rgb(223, 223, 223);
+}
+
+.first img {
+    height: 16px;
+    width: 22px;
+    padding-left: 5vw;
+    position: relative; 
+    right: -240px; 
+    background-color: white; 
+    top: -9vh; 
+    border-radius:50px ; 
+    padding: 12px 10px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+.second {
+    width: 25%;
+    border-right: 1px solid rgb(223, 223, 223);
+}
+
+.third {
+    width: 15%;
+    border-right: 1px solid rgb(223, 223, 223);
+}
+
+.fourth {
+    width: 15%;
+    border-right: 1px solid rgb(223, 223, 223);
+}
+
+.fifth {
+    width: 20%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.home {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.7)
+      ), url("beach.jpg");
+    background-size: cover;
+    padding-bottom: 2vh;
+}
+
+.item {
+    padding-top: 2vh;
+    text-align: center;
+}
+
+.item img {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.item p {
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 14px;
+}
+
+.logo {
+    margin-left: 5.5vw;
+    margin-right: 14vw;
+    margin-top: 5px;
+}
+
+.logo img {
+    height: 50px;
+    width: 155px;
+}
+
+.lower {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: -4vh;
+    background-color: white;
+    border-radius: 25px;
+    width: 75%;
+    margin: auto;
+    padding: auto;
+    text-align: center;
+}
+
+.my {
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+    font-family: "Sofia", cursive;
+    font-weight: bolder;
+    padding: 2px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-family: 'Almarai', sans-serif;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.2), 
+    rgba(0, 0, 0, 0.2)); */
+}
+
+.nav-elements {
+    margin-left: 7px;
+    margin-right: 1vw;
+    margin-top: 15px;
+    height: 40px;
+}
+
+.offers {
+    display: flex;
+    flex-direction: row;
+}
+
+.property {
+    height: 34px;
+    width: 34px;
+    margin-top: 2vh;
+}
+
+.radio {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 4px;
+}
+
+.savings {
+    margin-top: 3px;
+}
+
+.savings button {
+    margin-top: 4px;
+    color: white;
+    background-image: linear-gradient(to right, rgb(67, 225, 168), rgb(33, 147, 147));
+    border: none;
+    border-radius: 5px;
+    width: 125px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 2px 1px;
+}
+
+.search {
+    position: relative;
+}
+
+.search {
+    position: relative;
+    top: -1vh;
+    text-align: center;
+}
+
+.search button {
+    background-color: rgb(0, 89, 255);
+    background: linear-gradient(93deg, #53b2fe, #065af3);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 25px;
+    height: 45px;
+    width: 18%;
+    margin: auto;
+    font-weight: 600;
+}
+
+.ticket {
+    border-right: 2px dotted rgb(255 255 255 / 15%);
+    border-left: 2px dotted rgb(255 255 255 / 15%);
+    margin-top: 10px;
+    padding: 7px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.4);
+    height: 28px;
+    margin-left: 4px;
+}
+
+.ticket img {
+    height: 26px;
+    width: 45px;
+    float: left;
+}
+
+.trips {
+    height: 26px;
+    width: 20px;
+    margin-top: 18px; 
+    margin-left: 1vw
+}
+
+.upper {
+    position: relative;
+    top: -7.5vh;
+    background-color: white;
+    max-width: 76%;
+    margin: auto;
+    margin-bottom: 0;
+    border-radius: 10px;
+    /* height: 15vh; */
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+/* 
+.item{
+    img{
+        filter: grayscale(100%);
+    }
+} */
