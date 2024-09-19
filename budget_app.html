@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="budget_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- <script src="budget_script.js" defer></script> -->
+</head>
+<body>
+    <div class="navbar">
+        <p style="font-weight: 700; font-size: 20px;"><i style="font-size: 12px ;padding: 6px 9px; border-radius:50%; background-color: #F5004F; border: none;" class="fa-solid fa-calculator"></i> THE BUDGET APP</p>
+        <p style="font-weight: 600; font-size: 16px; margin-top: 18px;"><i style="padding-right: 5px;" class="fa-regular fa-circle-user"></i> <span id="name"> User </span></p>
+    </div>
+
+    <div class="card">
+        <div class="budget item1">
+            <div class="header" style="height: 7vh; background-color: #7C00FE; border-top-left-radius: 5px; border-top-right-radius: 5px; color: white; font-weight: 500; font-size: 20px;">
+                <span style="position: relative; padding: 10px; bottom: -7px;">Budget</span>
+            </div>
+            <div class="content">
+                <input type="number" placeholder="Enter Total Amount">
+                <button style="display: block;" onclick="">Set Budget</button>
+            </div>
+        </div>
+        <div class="budget item2">
+            <div class="header" style="height: 7vh; background-color: #7C00FE; border-top-left-radius: 5px; border-top-right-radius: 5px; color: white; font-weight: 500; font-size: 20px;">
+                <span style="position: relative; padding: 10px; bottom: -7px;">Add Expense</span>
+            </div>
+            <div class="content">
+                <input type="text" placeholder="Enter Title">
+                <input type="number" placeholder="Enter Cost">
+                <button style="display: block;"> Add </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="data">
+        <div class="values">
+            <p>Total Budget</p>
+            <p id="budget">100</p>
+        </div>
+        <div class="values">
+            <p>Expenses</p>
+            <p id="expense">100</p>
+        </div>
+        <div class="values">
+            <p>Balance</p>
+            <p id="balance">0</p>
+        </div>
+    </div>
+
+    <div class="list">
+        <div class="header" style="height: 7vh; background-color: #7C00FE; border-top-left-radius: 5px; border-top-right-radius: 5px; color: white; font-weight: 500; font-size: 20px;">
+            <span style="position: relative; padding: 10px; bottom: -7px;">Expense List</span>
+        </div>
+
+    </div>
+</body>
+</html>
