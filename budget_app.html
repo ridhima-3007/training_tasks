@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="budget_style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <!-- <script src="budget_script.js" defer></script> -->
+    <script src="budget_script.js" defer></script>
 </head>
 <body>
     <div class="navbar">
         <p class="fp"><i class="logo fa-solid fa-calculator"></i> THE BUDGET APP</p>
-        <p class="sp"><i style="padding-right: 5px;" class="fa-regular fa-circle-user"></i> <span id="name"> User </span></p>
+        <p class="sp"><i class="fa-regular fa-circle-user"></i> <span id="name"> User </span></p>
     </div>
 
     <div class="card">
@@ -21,8 +21,9 @@
                 <span>Budget</span>
             </div>
             <div class="content">
-                <input type="number" placeholder="Enter Total Amount">
-                <button style="display: block;" onclick="">Set Budget</button>
+                <p id="budget-error" class="hide error"> Value cannot be empty or negative.</p>
+                <input id="total-amount" type="number" placeholder="Enter Total Amount">
+                <button id="total-amount-button" style="display: block;" onclick="addBudget()">Set Budget</button>
             </div>
         </div>
         <div class="budget item2">
@@ -30,9 +31,11 @@
                 <span>Add Expense</span>
             </div>
             <div class="content">
-                <input type="text" placeholder="Enter Title">
-                <input type="number" placeholder="Enter Cost">
-                <button style="display: block;"> Add </button>
+                <p id="product-title-error" class="hide error"> Values cannot be empty.</p>
+                <input id="product-title" type="text" placeholder="Enter Title">
+                <p id="product-cost-error" class="hide error"> Values cannot be empty or negative.</p>
+                <input id="user-amount" type="number" placeholder="Enter Cost">
+                <button id="check-amount" style="display: block;"> Add </button>
             </div>
         </div>
     </div>
@@ -41,17 +44,17 @@
         <div class="values">
             <img src="budget_images/budget.png">
             <p>Total Budget</p>
-            <p id="budget">100</p>
+            <p id="amount">100</p>
         </div>
         <div class="values">
             <img src="budget_images/money-management.png">
             <p>Expenses</p>
-            <p id="expense">100</p>
+            <p id="expenditure-value">100</p>
         </div>
         <div class="values">
             <img src="budget_images/wallet.png">
             <p>Balance</p>
-            <p id="balance">0</p>
+            <p id="balance-amount">0</p>
         </div>
     </div>
 
@@ -60,18 +63,18 @@
             <span>Expense List</span>
         </div>
 
-        <div class="list-head">
+        <div id="list" class="list-head">
             <p>Title</p>
             <p>Amount</p>
             <p>Action</p>
         </div>
 
-        <div class="list-item list-head">
+        <div id="list-item" class="list-item list-head">
             <p>Movie</p>
             <p>&#8377;250</p>
             <div class="action">
-                <span><i style="color: rgba(0, 0, 255, 0.808);" class="fa-solid fa-pen-to-square"></i></span>
-                <span><i style="color: red;" class="fa-solid fa-trash"></i></span>
+                <span><i class="fa-solid fa-pen-to-square"></i></span>
+                <span><i class="fa-solid fa-trash"></i></span>
             </div>
         </div>
 
