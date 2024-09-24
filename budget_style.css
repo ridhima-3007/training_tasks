@@ -3,6 +3,7 @@ body {
     padding: 0;
     width: 100%;
     font-family: "Lato", sans-serif;
+    background: linear-gradient(75deg, #008cff9c, #9309fc77); ;
 }
 
 .action {
@@ -10,15 +11,18 @@ body {
     align-items: center;
 }
 
-.action span {
-    padding: 4px;
+.action button {
+    padding: 4px 8px;
+    border: none;
+    background-color: white;
 }
 
 .budget {
     width: 36vw;
     border-radius: 5px;
     border: none;
-    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.4);
+    background-color: white;
 }
 
 .card {
@@ -46,11 +50,17 @@ body {
 .content button {
     margin: 2vh;
     color: white;
-    background-color: #7C00FE;
+    background: linear-gradient(75deg, #008cff, #3d00d6bd); 
     border: none;
     font-size: 15px;
     padding: 6px 10px;
     border-radius: 5px;
+}
+
+.content input[type='number']::-webkit-outer-spin-button,
+.content input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .data {
@@ -74,7 +84,8 @@ body {
 
 .header {
     height: 7vh; 
-    background-color: #7C00FE; 
+    /* background: linear-gradient(75deg, #008cff, #3d00d6bd);  */
+    background: linear-gradient(75deg, #1E201E, #1e201eb9); 
     border-top-left-radius: 5px; 
     border-top-right-radius: 5px; 
     color: white; 
@@ -101,7 +112,7 @@ body {
 }
 
 .navbar {
-    background-color: #7C00FE;
+    /* background-color: #7C00FE; */
     width: 100%;
     height: 9vh;
     color: white;
@@ -137,7 +148,10 @@ body {
     width: 25%;
     border: none;
     border-radius: 5px;
-    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.4);
+    /* background-color: white; */
+    color: white;
+    /* transform: scale(1.2); */
 }
 
 .values img {
@@ -148,13 +162,26 @@ body {
     margin-left: 20px;
 }
 
+.first {
+    background: linear-gradient(75deg, #B60071, #b60070b7);
+}
+
+.second {
+    background: linear-gradient(75deg, #2513ab , #4C3BCF) ;
+}
+
+.third {
+    background: linear-gradient(93deg, #028391 , #028391ad)
+}
+
 .list {
     width: 75%;
     margin: auto;
     border-radius: 5px;
-    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
-    /* height: 20vh; */
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.4);
+    background-color: white;
     margin-top: 4vh;
+    padding-bottom: 15px;
 }
 
 .list-head {
@@ -163,10 +190,12 @@ body {
     text-align: center;
     justify-content: space-around;
     font-size: 18px;
+    background-color: white;
 }
 
 .list-item {
     /* background-color: rgb(199, 226, 245); */
+    background-color: white;
     border-left: 5px solid #7C00FE;
     justify-content: space-between;
     width: 75%;
@@ -184,10 +213,6 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-    .card {
-        /* width: 90%; */
-        
-    }
 
     .list {
         width: 85%;
