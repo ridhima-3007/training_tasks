@@ -13,9 +13,9 @@ function setLocalStorage(a, b) {
   localStorage.setItem(a, JSON.stringify(b));
 }
 
-let totalAmount = document.getElementById("total-amount");
-let productTitle = document.getElementById("product-title");
-let userAmount = document.getElementById("user-amount");
+const totalAmount = document.getElementById("total-amount");
+const productTitle = document.getElementById("product-title");
+const userAmount = document.getElementById("user-amount");
 
 const totalAmountButton = document.getElementById("total-amount-button");
 const checkAmountButton = document.getElementById("check-amount");
@@ -25,20 +25,19 @@ const budgetErrorMessage = document.getElementById("budget-error");
 const productTitleErrorMessage = document.getElementById("product-title-error");
 const productCostErrorMessage = document.getElementById("product-cost-error");
 
-let amount = document.getElementById("amount");
-let expenditureValue = document.getElementById("expenditure-value");
-let balanceValue = document.getElementById("balance-amount");
+const amount = document.getElementById("amount");
+const expenditureValue = document.getElementById("expenditure-value");
+const balanceValue = document.getElementById("balance-amount");
 
 const list = document.getElementById("list");
 
 let expenses = getLocalStorage("expenses") || [];
+let data = getLocalStorage("data") || {budget : 0, cost : 0, balance : 0};
+setLocalStorage("data", data);
 
-let budget = parseInt(getLocalStorage("budget")) || 0;
-let cost = parseInt(getLocalStorage("expense")) || 0;
-let balance = parseInt(getLocalStorage("balance")) || 0;
-amount.innerHTML = getLocalStorage("budget") || 0;
-balanceValue.innerHTML = getLocalStorage("balance") || 0;
-expenditureValue.innerHTML = getLocalStorage("expense") || 0;
+amount.innerHTML = data.budget;
+balanceValue.innerHTML = data.balance;
+expenditureValue.innerHTML = data.cost;
 
 let editIndex = null;
 
@@ -51,31 +50,27 @@ function addBudget(clear = false) {
     budgetErrorMessage.setAttribute("class", "error");
   } else {
     budgetErrorMessage.setAttribute("class", "hide error");
-    budget += value;
-    balance = budget-cost;
-    setLocalStorage("balance", balance);
-    setLocalStorage("budget", budget);
-    setLocalStorage("expense", cost);
+    data.budget += value;
+    data.balance = data.budget-data.cost;
     setLocalStorage("expenses", expenses);
-    amount.innerHTML = getLocalStorage("budget");
-    balanceValue.innerHTML = getLocalStorage("balance");
-    expenditureValue.innerHTML = getLocalStorage("expense");
+    setLocalStorage("data", data);
+    amount.innerHTML = data.budget;
+    balanceValue.innerHTML = data.balance;
+    expenditureValue.innerHTML = data.cost;
   }
 }
 
 function clearBudget() {
-  budget = 0;
-  cost = 0;
+  data.budget = 0;
+  data.cost = 0;
   expenses = [];
   list.innerHTML = "";
-  balance = budget-cost;
-  setLocalStorage("balance", balance);
-  setLocalStorage("budget", budget);
-  setLocalStorage("expense", cost);
+  data.balance = data.budget-data.cost;
+  setLocalStorage("data", data);
   setLocalStorage("expenses", expenses);
-  amount.innerHTML = getLocalStorage("budget");
-  balanceValue.innerHTML = getLocalStorage("balance");
-  expenditureValue.innerHTML = getLocalStorage("expense");
+  amount.innerHTML = data.budget;
+  balanceValue.innerHTML = data.balance;
+  expenditureValue.innerHTML = data.cost;
 }
 
 function addExpense(update=false) {
@@ -83,19 +78,19 @@ function addExpense(update=false) {
   const title = productTitle.value.trim();
   userAmount.value = "";
   productTitle.value = null;
-  if (budget == 0) {
+  if (data.budget == 0) {
     productTitleErrorMessage.innerHTML = "Please set a budget first!";
     productTitleErrorMessage.setAttribute("class", "error");
   } else if (title == "" || isNaN(expense) || expense <= 0) {
     productTitleErrorMessage.setAttribute("class", "error");
-  } else if (expense > balance) {
+  } else if (expense > data.balance) {
     productTitleErrorMessage.innerHTML = "You do not have enough balance!";
     productTitleErrorMessage.setAttribute("class", "error");
   } else {
     productTitleErrorMessage.setAttribute("class", "hide error");
-    cost += expense;
+    data.cost += expense;
     if(update) {
-      cost -= expenses[editIndex].ecost;
+      data.cost -= expenses[editIndex].ecost;
       expenses[editIndex].ecost = expense;
       expenses[editIndex].etitle = title;
       editIndex = null;
@@ -106,11 +101,10 @@ function addExpense(update=false) {
     else {
       createObject(title, expense);
     }
-    expenditureValue.innerHTML = cost;
-    balance = budget - cost;
-    balanceValue.innerHTML = balance;
-    setLocalStorage("expense", cost);
-    setLocalStorage("balance", balance);
+    expenditureValue.innerHTML = data.cost;
+    data.balance = data.budget - data.cost;
+    balanceValue.innerHTML = data.balance;
+    setLocalStorage("data", data);
     createFullList();
   }
 }
@@ -149,25 +143,25 @@ function editAction(listItem, i) {
   updateAmountButton.setAttribute("class", "");
   checkAmountButton.setAttribute("class", "hide");
   editIndex = i;
-  // deleteAction(listItem);
 }
 
 function deleteAction(listItem) {
-  const expenseTitle = listItem.querySelector(".product").innerText;
-  const expenseCost = parseInt(listItem.querySelector(".amount").innerText);
-  cost -= expenseCost;
-  balance += expenseCost;
-  setLocalStorage("expense", cost);
-  setLocalStorage("balance", balance);
-  balanceValue.innerHTML = getLocalStorage("balance");
-  expenditureValue.innerHTML = getLocalStorage("expense");
-  expenses = getLocalStorage("expenses");
-  let index = expenses.findIndex(
-    (item) => item.etitle === expenseTitle && item.ecost == expenseCost
-  );
-  expenses.splice(index, 1);
-  setLocalStorage("expenses", expenses);
-  listItem.remove();
+  if(confirm("Are you sure ?")) {
+    const expenseTitle = listItem.querySelector(".product").innerText;
+    const expenseCost = parseInt(listItem.querySelector(".amount").innerText);
+    data.cost -= expenseCost;
+    data.balance += expenseCost;
+    setLocalStorage("data", data);
+    balanceValue.innerHTML = data.balance;
+    expenditureValue.innerHTML = data.cost;
+    expenses = getLocalStorage("expenses");
+    let index = expenses.findIndex(
+      (item) => item.etitle === expenseTitle && item.ecost == expenseCost
+    );
+    expenses.splice(index, 1);
+    setLocalStorage("expenses", expenses);
+    listItem.remove();
+  }
 }
 
 function createObject(expenseTitle, expenseCost) {
