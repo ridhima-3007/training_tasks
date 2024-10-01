@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissor</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <!-- scoreBoard -->
+    <div class="score">
+        <h1>ROCK PAPER SCISSOR</h1>
+        <div class="board">
+            <p><span id="player_score">0</span> : <span id="computer_score">0</span></p>
+        </div> 
+        <p class="player">PLAYER</p>
+        <p class="computer">COMPUTER</p>   
+    </div>
+
+    <!-- game -->
+    <div class="game">
+        <div class="player_move">
+            <img id="player_img" src="rock.png" alt="">
+        </div>
+        <div class="result">
+            <p id="result">YOU WIN</p>
+            <!-- <button>PLAY AGAIN</button> -->
+        </div>
+        <div class="computer_move">
+            <img id="computer_img" src="paper.png" alt="">
+        </div>
+    </div>
+
+    <!-- user choose move -->
+    <div class="choice">
+        <div class="choose">
+            <div class="options">
+                <img id="rock_img" src="rock.png" alt="">
+            </div>
+            <div class="options">
+                <img id="paper_img" src="paper.png" alt="">
+            </div>
+            <div class="options">
+                <img id="scissor_img" src="scissors.png" alt="">
+            </div>
+        </div>
+        <p>Choose your move</p>
+    </div>
+
+    <!-- reset game -->
+    <button onclick="resetScore()" class="reset">Reset Game</button>
+  </body>
+</html>

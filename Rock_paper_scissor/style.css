@@ -1,0 +1,130 @@
+body {
+    background-color: rgb(36, 36, 143);
+    text-align: center;
+    padding-bottom: 4vh;
+}
+
+.board {
+    border: 1px solid white;
+    height: 10vh;
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board p {
+    color: white;
+    margin-bottom: 0;
+}
+
+.computer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    position: relative;
+    right: -12vw;
+    top: -16vh;
+    align-content: center;
+    padding: 1vh;
+}
+
+.computer_move img {
+    width: 10vw;
+}
+
+.computer_move {
+    border-radius: 50%;
+    border: 1vw solid yellow;
+    padding: 4vh;
+    margin: 2vh;
+}
+
+.choose {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+.choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice p {
+    color: white;
+}
+
+.game {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.options {
+    border: 1vh solid lawngreen;
+    margin: 1vh;
+    border-radius: 50%;
+    padding: 2vh;
+}
+
+.options img {
+    width: 5vw;
+}
+
+.player {
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-content: center;
+    position: relative;
+    left: -12vw;
+    top: -8vh;
+    padding: 1vh;
+}
+
+.player_move {
+    border-radius: 50%;
+    border: 1vw solid yellow;
+    padding: 4vh;
+    margin: 2vh;
+}
+
+.player_move img {
+    width: 10vw;
+}
+
+.result {
+    color: white;
+    padding: 2vh;
+}
+
+.result p {
+    font-size: 4vh;
+}
+
+.result button {
+    border: none;
+}
+
+.reset {
+    border: none;
+}
+
+.score {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 4vh;
+    /* height: vh; */
+}
+
+.score h1 {
+    color: white;
+}
+
+

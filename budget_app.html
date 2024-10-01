@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App</title>
+    <link rel="stylesheet" href="budget_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="budget_script.js" defer></script>
+</head>
+<body>
+    <div class="navbar">
+        <p class="fp"> THE BUDGET APP</p>
+        <p class="sp"><i class="fa-regular fa-circle-user"></i> <span id="name"> User </span></p>
+    </div>
+
+    <div class="data">
+        <div class="values first">
+            <img src="budget_images/budget.png">
+            <p>Total Budget</p>
+            <p id="amount">0</p>
+        </div>
+        <div class="values second">
+            <img src="budget_images/money-management.png">
+            <p>Expenses</p>
+            <p id="expenditure-value">0</p>
+        </div>
+        <div class="values third">
+            <img src="budget_images/wallet.png">
+            <p>Balance</p>
+            <p id="balance-amount">0</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="budget item1">
+            <div class="header">
+                <span>Budget</span>
+            </div>
+            <div class="content">
+                <p id="budget-error" class="hide error"> Value cannot be empty or negative.</p>
+                <input min="1" id="total-amount" type="number" placeholder="Enter Total Amount (in &#8377;)" >
+                <button id="total-amount-button" onclick="addBudget()">Add Budget</button>
+                <button id="total-amount-clear-button" onclick="clearBudget()">Reset Budget</button>
+            </div>
+        </div>
+        <div class="budget item2">
+            <div class="header">
+                <span>Add Expense</span>
+            </div>
+            <div class="content">
+                <p id="product-title-error" class="hide error">Please enter valid details</p>
+                <input id="product-title" type="text" placeholder="Enter Title">
+                <input min="1" id="user-amount" type="number" placeholder="Enter Cost (in &#8377;)">
+                <button id="check-amount" class="" onclick="addExpense()"> Add </button>
+                <button id="update-amount" class="hide" onclick="updateExpense()"> Update </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="list">
+        <div class="header">
+            <span>Expense List</span>
+        </div>
+
+        <div class="list-head">
+            <p>Title</p>
+            <p>Amount</p>
+            <p>Action</p>
+        </div>
+
+        <div id="list">
+            
+        </div>
+
+    </div>
+</body>
+</html>
