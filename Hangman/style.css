@@ -1,0 +1,120 @@
+body {
+    background-color: rgb(36, 36, 187);
+
+}
+
+.container {
+    background-color: white;
+    height: 80vh;
+    width: 90vw;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.image {
+    align-content: center;
+    width: 40%;
+    /* background-color: aqua; */
+    text-align: center;
+}
+
+.image img{
+    height: 35vh;
+    width: 25vw;
+    margin: auto;
+}
+
+.image p {
+    font-size: 4vh;
+}
+
+.game {
+    width: 60%;
+    /* background-color: blueviolet; */
+    align-content: center;
+    text-align: center;
+    padding: 2vw;
+}
+
+.hint {
+    font-size: 3vh;
+}
+
+.red {
+    color: red;
+}
+
+.btn {
+    border: none;
+    background-color:  rgb(63, 63, 221);
+    color: white;
+    width: 3vw;
+    height: 3vw;
+    margin: 1vh;
+    font-size: 2vw;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn2 {
+    background-color: aliceblue;
+    border: none;
+    border-bottom: 2px solid black;
+    width: 4vw;
+    height: 4vw;
+    font-size: 3vh;
+    margin: 2px;
+}
+
+.start {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 1vh;
+    border-radius: 5px;
+    font-size: 3vh;
+    margin-top: 4vh;
+}
+
+.hide {
+    display: none;
+}
+
+.modal {
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    align-items: center;
+}
+
+.modal-content img {
+    height: 10vw;
+    width: 10vw;
+}
+
+.modal-content p {
+    font-size: 4vh;
+}
+
+#correct_word {
+    color: blue;
+}
